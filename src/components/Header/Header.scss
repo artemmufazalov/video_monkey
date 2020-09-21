@@ -7,7 +7,7 @@
   flex-direction: row;
   justify-content: space-between;
 
-  width: 100%;
+  min-width: 100vw;
   height: 80px;
 
   background-color: $green;

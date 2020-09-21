@@ -9,24 +9,30 @@ import MainPage from "./pages/MainPage/MainPage";
 
 const NotFound = React.lazy(() => import("./pages/NotFoundPage/NotFound"));
 
-const App = () => {
-    return (
-        <div className={"app-wrapper"}>
-            <Header/>
+class App extends React.Component {
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
 
-            <div className={"app-wrapper__mainContent"}>
-                <Suspense fallback={<Preloader large/>}>
-                    <Switch>
-                        <Route path="/" exact render={() => <MainPage/>}/>
+    render() {
+        return (
+            <div className={"app-wrapper"}>
+                <Header/>
 
-                        <Route path="*" render={() => <NotFound/>}/>
-                    </Switch>
-                </Suspense>
+                <div className={"app-wrapper__mainContent"}>
+                    <Suspense fallback={<Preloader large/>}>
+                        <Switch>
+                            <Route path="/" exact render={() => <MainPage/>}/>
+
+                            <Route path="*" render={() => <NotFound/>}/>
+                        </Switch>
+                    </Suspense>
+                </div>
+
+                <Footer/>
             </div>
-
-            <Footer/>
-        </div>
-    );
+        );
+    }
 }
 
 

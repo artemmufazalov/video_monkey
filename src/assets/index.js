@@ -6,7 +6,9 @@ export {default as userIcon} from "./svgIcons/user.svg";
 export {default as shoppingCartIcon} from "./svgIcons/shopping-cart.svg";
 export {default as exclamationIcon} from "./svgIcons/exclamation.svg";
 export {default as checkedIcon} from "./svgIcons/checked.svg";
+export {default as checkedGreenIcon} from "./svgIcons/checkedGreen.svg";
 export {default as preloader} from "./preloader/Spinner-1.3s-200px.svg";
+export {default as softwareLogo} from "./svgIcons/softwareLogo.svg";
 
 //social networks links
 export {default as instagramLogo} from "./svgIcons/instagram.svg";
@@ -21,7 +23,7 @@ export {default as spinIcon} from "./svgIcons/spin.svg";
 export {default as videoCameraIcon} from "./svgIcons/video-camera.svg";
 export {default as videoPlayerIcon} from "./svgIcons/video-player.svg";
 export {default as headphonesIcon} from "./svgIcons/headphones.svg";
-
+export {default as spinWithButton} from "./svgIcons/spinWithButton.svg";
 
 //photos Main Page
 export {default as cameraImg} from "./photos/camera.jpg";
