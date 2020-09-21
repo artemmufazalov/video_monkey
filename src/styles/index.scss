@@ -1,0 +1,13 @@
+.app-wrapper {
+  min-height: 101vh;
+  display: grid;
+  grid-template-areas:
+          "header"
+          "mainContent"
+          "footer";
+  grid-template-rows: 80px 1fr 150px;
+
+  &__mainContent{
+    grid-area: mainContent;
+  }
+}

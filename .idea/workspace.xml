@@ -1,13 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="83d5ceea-6c8e-40f2-90aa-56ffb3705b44" name="Default Changelist" comment="" />
+    <list default="true" id="83d5ceea-6c8e-40f2-90aa-56ffb3705b44" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/gorillaIcon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/photos/404notFound.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/photos/alps.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/photos/camera.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/photos/laptop.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/photos/workingPlace.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/preloader/Spinner-1.3s-200px.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/camera.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/checked.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/computer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/exclamation.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/facebook.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/gorilla.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/headphones.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/instagram.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/monkey-facing-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/reactLogo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/shopping-cart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/spin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/user.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/video-camera.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/video-player.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/vk.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/svgIcons/youtube.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer/Footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer/Footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Preloader/Preloader.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Preloader/Preloader.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/NotFoundPage/NotFound.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/NotFoundPage/NotFound.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1hixOMz035LRGMBmqc2X9DQfYKf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -20,6 +92,33 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JS\03\video_monkey\src\assets\preloader" />
+      <recent name="D:\JS\03\video_monkey\src" />
+      <recent name="D:\JS\03\video_monkey\src\assets\icons" />
+      <recent name="D:\JS\03\video_monkey\src\assets" />
+      <recent name="D:\JS\03\video_monkey\public" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.deploy" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -30,10 +129,59 @@
       <option name="presentableId" value="Default" />
       <updated>1600507681747</updated>
       <workItem from="1600507683007" duration="1043000" />
+      <workItem from="1600508819124" duration="1838000" />
+      <workItem from="1600514835819" duration="729000" />
+      <workItem from="1600671730914" duration="13264000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="524" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600510347940">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="524" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1600510347940" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600510638196">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1600510638196" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1600687284089">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600687284089" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1600687284088">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600687284088" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1600687284088">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600687284088" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1600687284089">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600687284089" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1600675741680">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600675741680" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1600680621476">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600680621476" />
   </component>
 </project>

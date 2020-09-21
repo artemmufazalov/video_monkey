@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Suspense} from 'react';
+import {Switch, Route, HashRouter} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./styles/index.scss";
+import Preloader from "./components/Preloader/Preloader";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import MainPage from "./pages/MainPage/MainPage";
+
+const NotFound = React.lazy(() => import("./pages/NotFoundPage/NotFound"));
+
+const App = () => {
+    return (
+        <div className={"app-wrapper"}>
+            <Header/>
+
+            <div className={"app-wrapper__mainContent"}>
+                <Suspense fallback={<Preloader large/>}>
+                    <Switch>
+                        <Route path="/" exact render={() => <MainPage/>}/>
+
+                        <Route path="*" render={() => <NotFound/>}/>
+                    </Switch>
+                </Suspense>
+            </div>
+
+            <Footer/>
+        </div>
+    );
 }
 
-export default App;
+
+const MonkeyApp = () => {
+    return (
+        <HashRouter>
+            <App/>
+        </HashRouter>
+    );
+}
+export default MonkeyApp;
