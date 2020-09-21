@@ -1,35 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1f135d3c0b9f5cbd5e7fd40cbca5deda",
+    "revision": "ad7387d397e3037b8ac2b04aec87b45b",
     "url": "/video_monkey/index.html"
   },
   {
-    "revision": "0b0e5a8a877d6e81aab2",
-    "url": "/video_monkey/static/css/3.c2b8e913.chunk.css"
+    "revision": "c0b9a7c8206be6399613",
+    "url": "/video_monkey/static/css/3.4efdc3ef.chunk.css"
   },
   {
-    "revision": "dcef1bda5728d7cef9fd",
-    "url": "/video_monkey/static/css/main.4d0c8205.chunk.css"
+    "revision": "2ba396b169b958f8f789",
+    "url": "/video_monkey/static/css/main.99f9c4c6.chunk.css"
   },
   {
-    "revision": "837eb202c26cbb2c9f3f",
-    "url": "/video_monkey/static/js/2.64ad05e2.chunk.js"
+    "revision": "ef407edb3fec59976723",
+    "url": "/video_monkey/static/js/2.64c1663f.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/video_monkey/static/js/2.64ad05e2.chunk.js.LICENSE.txt"
+    "url": "/video_monkey/static/js/2.64c1663f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0b0e5a8a877d6e81aab2",
-    "url": "/video_monkey/static/js/3.9f453088.chunk.js"
+    "revision": "c0b9a7c8206be6399613",
+    "url": "/video_monkey/static/js/3.541cf7f5.chunk.js"
   },
   {
-    "revision": "dcef1bda5728d7cef9fd",
-    "url": "/video_monkey/static/js/main.64d4f224.chunk.js"
+    "revision": "2ba396b169b958f8f789",
+    "url": "/video_monkey/static/js/main.93d4d4d8.chunk.js"
   },
   {
-    "revision": "0ea65c9421de644c2b7d",
-    "url": "/video_monkey/static/js/runtime-main.182d8c6c.js"
+    "revision": "4e9a4e977784e5b1b7c2",
+    "url": "/video_monkey/static/js/runtime-main.b557ea3c.js"
   },
   {
     "revision": "472316058a24faeddb2eae681d910940",
@@ -44,6 +44,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/video_monkey/static/media/alps.2a90d0a9.jpg"
   },
   {
+    "revision": "0910c2e6467bf6781e018a50caa5ab53",
+    "url": "/video_monkey/static/media/alps2.0910c2e6.png"
+  },
+  {
     "revision": "4ba2ea3816a40217b409a8eb354fbe71",
     "url": "/video_monkey/static/media/camera.4ba2ea38.jpg"
   },
@@ -54,6 +58,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4f7c935656413570c0c67076f0b9e5fb",
     "url": "/video_monkey/static/media/checked.4f7c9356.svg"
+  },
+  {
+    "revision": "09ffabe28fa2d3f63da82b39ec492d46",
+    "url": "/video_monkey/static/media/checkedGreen.09ffabe2.svg"
   },
   {
     "revision": "eb45b08f9c6f90ae46cfea0cb3c60368",
@@ -92,8 +100,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/video_monkey/static/media/shopping-cart.f9ab4a78.svg"
   },
   {
+    "revision": "2337233075388c5d46f205003cfa467c",
+    "url": "/video_monkey/static/media/softwareLogo.23372330.svg"
+  },
+  {
     "revision": "6b00b179db4e292507463a0787292025",
     "url": "/video_monkey/static/media/spin.6b00b179.svg"
+  },
+  {
+    "revision": "36aa2f92c35f03559fefe65e869e1cb7",
+    "url": "/video_monkey/static/media/spinWithButton.36aa2f92.svg"
   },
   {
     "revision": "c02781251fbb9d0e5c6b53e538b8e6ca",
