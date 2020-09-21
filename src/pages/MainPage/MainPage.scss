@@ -227,6 +227,7 @@
           flex-direction: row;
 
           margin-bottom: 5px;
+
           img {
             width: 25px;
             height: 25px;
@@ -234,6 +235,11 @@
           }
         }
 
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
       }
 
       &__button {

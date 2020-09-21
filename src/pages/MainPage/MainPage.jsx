@@ -121,40 +121,46 @@ const MainPage = () => {
                     <div className={"mainPage__products__column__header"}>Video Monkey Free</div>
                     <div className={"mainPage__products__column__price"}>Бесплатно</div>
                     <div className={"mainPage__products__column__features"}>
-                        {features.free.map(text =><div className={"mainPage__products__column__features__item"}>
+                        {features.free.map(text => <div className={"mainPage__products__column__features__item"}>
                             <img src={checkedGreenIcon} alt={"check"}/>
                             <span>{text}</span>
                         </div>)}
                     </div>
-                    <span className={"mainPage__products__column__button"}>
+                    <NavLink to={"/products"}>
+                        <span className={"mainPage__products__column__button"}>
                         Попробовать бесплатно
-                    </span>
+                        </span>
+                    </NavLink>
                 </div>
                 <div className={"mainPage__products__column"}>
                     <div className={"mainPage__products__column__header"}>Video Monkey Pro</div>
                     <div className={"mainPage__products__column__price"}>6 990 рублей</div>
                     <div className={"mainPage__products__column__features"}>
-                        {features.pro.map(text =><div className={"mainPage__products__column__features__item"}>
+                        {features.pro.map(text => <div className={"mainPage__products__column__features__item"}>
                             <img src={checkedGreenIcon} alt={"check"}/>
                             <span>{text}</span>
                         </div>)}
                     </div>
-                    <span className={"mainPage__products__column__button"}>
+                    <NavLink to={"/cart"}>
+                         <span className={"mainPage__products__column__button"}>
                         Добавить в корзину
-                    </span>
+                        </span>
+                    </NavLink>
                 </div>
                 <div className={"mainPage__products__column"}>
                     <div className={"mainPage__products__column__header"}>Video Monkey Pro 365</div>
                     <div className={"mainPage__products__column__price"}> 690 рублей ежемесячно</div>
                     <div className={"mainPage__products__column__features"}>
-                        {features.pro.map(text =><div className={"mainPage__products__column__features__item"}>
+                        {features.pro.map(text => <div className={"mainPage__products__column__features__item"}>
                             <img src={checkedGreenIcon} alt={"check"}/>
                             <span>{text}</span>
                         </div>)}
                     </div>
-                    <span className={"mainPage__products__column__button"}>
+                    <NavLink to={"/cart"}>
+                         <span className={"mainPage__products__column__button"}>
                         Добавить в корзину
-                    </span>
+                        </span>
+                    </NavLink>
                 </div>
             </div>
         </div>
