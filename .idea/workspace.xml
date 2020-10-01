@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83d5ceea-6c8e-40f2-90aa-56ffb3705b44" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/MainPage/MainPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/MainPage/MainPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.scss" afterDir="false" />
@@ -24,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -42,6 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -85,7 +88,12 @@
       <workItem from="1600507683007" duration="1043000" />
       <workItem from="1600508819124" duration="1838000" />
       <workItem from="1600514835819" duration="729000" />
-      <workItem from="1600671730914" duration="22624000" />
+      <workItem from="1600671730914" duration="22920000" />
+      <workItem from="1600717279979" duration="65000" />
+      <workItem from="1601493925555" duration="493000" />
+      <workItem from="1601552130642" duration="68000" />
+      <workItem from="1601558202743" duration="1795000" />
+      <workItem from="1601564758227" duration="1701000" />
     </task>
     <task id="LOCAL-00001" summary="Add Preloader, Footer, Header and 404 Page Not Found components&#10;&#10;* Update README.md">
       <created>1600688241862</created>
@@ -101,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600697191176</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Make buttons on the main page active">
+      <created>1600697817808</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600697817808</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +137,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Preloader, Footer, Header and 404 Page Not Found components&#10;&#10;* Update README.md" />
     <MESSAGE value="Add main page content" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add main page content" />
+    <MESSAGE value="Make buttons on the main page active" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make buttons on the main page active" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600510347940">
@@ -133,30 +149,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1600510638196" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1600697532976">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1600697966045">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600697532976" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1600697532976">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600697966045" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1600697966045">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600697532976" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1600697532976">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600697966045" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1600697966045">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600697532976" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1600697532976">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600697966045" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1600697966045">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600697532976" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600697966045" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1600675741680">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600675741680" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1600697203191">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1600697824558">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600697203191" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600697824558" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1600680621476">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
