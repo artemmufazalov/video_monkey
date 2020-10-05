@@ -7,7 +7,7 @@ import {facebookLogo, headphonesIcon, instagramLogo, vkLogo, youtubeLogo} from "
 
 const Footer = () => {
     return (
-        <div className={"footer"}>
+        <footer className={"footer"}>
             <div className={"footer__left"}>
                 <div className={"footer__left__top"}>
                     <div className={"footer__left__top__column"}>
@@ -53,7 +53,7 @@ const Footer = () => {
                 </a>
             </div>
 
-        </div>
+        </footer>
     );
 };
 

@@ -6,7 +6,7 @@ import {monkeyLogo, shoppingCartIcon, userIcon} from "../../assets";
 
 const Header = () => {
     return (
-        <div className="header">
+        <header className="header">
             <span className="header__left">
                 <div className="header__left__appLogo">
                     <NavLink to={"/"}>
@@ -37,7 +37,7 @@ const Header = () => {
                 </div>
 
             </span>
-        </div>
+        </header>
     );
 };
 

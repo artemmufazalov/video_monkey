@@ -33,3 +33,6 @@ export {default as alpsImg} from "./photos/alps.jpg";
 
 //404 not found page
 export {default as notFoundImg} from "./photos/404notFound.jpg";
+
+//Auth page
+export {default as communityImg} from "./photos/community.png";

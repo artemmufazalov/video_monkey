@@ -28,7 +28,7 @@ const features = {
 const MainPage = () => {
     return (
         <div className={"mainPage"}>
-            <div className={"mainPage__top"}>
+            <section className={"mainPage__top"}>
                 <div className={"mainPage__top__content"}>
                     <div className={"mainPage__top__content__top"}>
                         <img src={softwareLogo} className={"mainPage__top__content__top__logo"} alt={"software logo"}/>
@@ -43,9 +43,9 @@ const MainPage = () => {
                         <span className={"mainPage__top__content__tryButton"}>Попробовать бесплатно</span>
                     </NavLink>
                 </div>
-            </div>
+            </section>
 
-            <div className={"mainPage__features"}>
+            <section className={"mainPage__features"}>
                 <div className={"mainPage__features__header"}>
                     Лучшее решение для хобби и творчества
                 </div>
@@ -67,9 +67,9 @@ const MainPage = () => {
                         <div>Захват видео с экрана</div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div className={"mainPage__photosAndText"}>
+            <section className={"mainPage__photosAndText"}>
                 <div className={"mainPage__photosAndText__item"}>
                     <img src={cameraImg} className={"mainPage__photosAndText__item__photo"} alt={"camera"}/>
                     <span className={"mainPage__photosAndText__item__content"}>
@@ -114,9 +114,9 @@ const MainPage = () => {
                     Дайте волю своему творческому потенциалу, <br/>
                     позвольте программе решать рутинные задачи за вас!
                 </div>
-            </div>
+            </section>
 
-            <div className={"mainPage__products"}>
+            <section className={"mainPage__products"}>
                 <div className={"mainPage__products__column"}>
                     <div className={"mainPage__products__column__header"}>Video Monkey Free</div>
                     <div className={"mainPage__products__column__price"}>Бесплатно</div>
@@ -162,7 +162,7 @@ const MainPage = () => {
                         </span>
                     </NavLink>
                 </div>
-            </div>
+            </section>
         </div>
     );
 };
