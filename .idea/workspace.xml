@@ -11,31 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83d5ceea-6c8e-40f2-90aa-56ffb3705b44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BLL/reducers/cartReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BLL/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BLL/reducers/profileReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BLL/store/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/photos/community.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AuthPage/AuthPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AuthPage/AuthPage.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AuthPage/LoginPage/LoginContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AuthPage/LoginPage/LoginForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AuthPage/RegisterPage/RegisterContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AuthPage/RegisterPage/RegisterForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/helpers/validateForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validate/validate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/MainPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AuthPage/AuthPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AuthPage/AuthPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AuthPage/RegisterPage/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AuthPage/RegisterPage/RegisterForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +99,7 @@
       <workItem from="1601564758227" duration="2879000" />
       <workItem from="1601626174103" duration="1229000" />
       <workItem from="1601803430714" duration="872000" />
-      <workItem from="1601882867103" duration="9741000" />
+      <workItem from="1601882867103" duration="11597000" />
     </task>
     <task id="LOCAL-00001" summary="Add Preloader, Footer, Header and 404 Page Not Found components&#10;&#10;* Update README.md">
       <created>1600688241862</created>
@@ -150,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601572031908</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Create Auth Page&#10;&#10;* Create Login and Register forms. Add validation&#10;&#10;* Add redux store, add empty reducers templates&#10;&#10;* Add errors processing to the App component&#10;&#10;* Add styles imports for ant-design and reset-css">
+      <created>1601896408282</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601896408282</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +159,8 @@
     <MESSAGE value="Add main page content" />
     <MESSAGE value="Make buttons on the main page active" />
     <MESSAGE value="Some small changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some small changes" />
+    <MESSAGE value="Create Auth Page&#10;&#10;* Create Login and Register forms. Add validation&#10;&#10;* Add redux store, add empty reducers templates&#10;&#10;* Add errors processing to the App component&#10;&#10;* Add styles imports for ant-design and reset-css" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Auth Page&#10;&#10;* Create Login and Register forms. Add validation&#10;&#10;* Add redux store, add empty reducers templates&#10;&#10;* Add errors processing to the App component&#10;&#10;* Add styles imports for ant-design and reset-css" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600510347940">
@@ -188,30 +175,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601627416677" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1601576367851">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1601896782683">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601576367851" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1601576367851">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601896782683" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1601896782683">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601576367851" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1601576367851">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601896782683" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1601896782683">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601576367851" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1601576367851">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601896782683" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1601896782683">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601576367851" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601896782683" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1600675741680">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600675741680" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601572045998">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601896453684">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601572045998" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601896453684" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1600680621476">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

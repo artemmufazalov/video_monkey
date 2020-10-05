@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import {Form,Input,Button} from "antd";
+import {Form, Input, Button} from "antd";
 import {UserOutlined, LockOutlined, MailOutlined, InfoCircleOutlined} from '@ant-design/icons';
 
 import validateForm from "../../../utils/helpers/validateForm";
@@ -38,13 +38,13 @@ const RegisterForm = (props) => {
             </div>
 
             <div className={"auth__container__form"}>
-                {!isRegisterFormSent ?
-                    <div className={"auth__container__form__block"}>
 
-                        <div className={"auth__container__form__heading"}>
-                            <h2>Зарегистрироваться</h2>
-                        </div>
+                <div className={"auth__container__form__block"}>
 
+                    <div className={"auth__container__form__heading"}>
+                        <h2>Зарегистрироваться</h2>
+                    </div>
+                    {!isRegisterFormSent ?
                         <Form onFinish={handleSubmit}>
 
                             <Form.Item hasFeedback
@@ -114,18 +114,20 @@ const RegisterForm = (props) => {
                             </div>
 
                         </Form>
-                    </div>
-                    :
-                    <div className={"auth__container__form__block"}>
-                        <InfoCircleOutlined/>
-                        <h3>
-                            Подтвердите свой аккаунт
-                        </h3>
-                        <p>
-                            На Вашу почту отправлено письмо с ссылкой для подтверждение аккаунта.
-                        </p>
-                    </div>
-                }
+                        :
+                        <div className={"auth__container__form__block--confirmation"}>
+                            <InfoCircleOutlined/>
+                            <h3>
+                                Подтвердите свой аккаунт
+                            </h3>
+                            <p>
+                                На Вашу почту отправлено письмо с ссылкой для подтверждение аккаунта.
+                            </p>
+                        </div>
+                    }
+
+                </div>
+
             </div>
 
         </div>

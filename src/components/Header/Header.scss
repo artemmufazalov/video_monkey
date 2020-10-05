@@ -10,7 +10,7 @@
   min-width: 100vw;
   height: 80px;
 
-  background-color: $headerHoverColor;
+  background-color: $green;
 
   &__left {
     order: 1;
@@ -39,7 +39,7 @@
       text-decoration: none;
     }
     a:hover {
-      color: brown;
+      color: $headerHoverColor;
     }
   }
 
