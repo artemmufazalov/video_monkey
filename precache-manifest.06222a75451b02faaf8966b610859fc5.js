@@ -1,35 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8d90315e923f50a73684b8def1d12412",
+    "revision": "6d5fea1809af401ae2b8e039a22be3ab",
     "url": "/video_monkey/index.html"
   },
   {
-    "revision": "c0b9a7c8206be6399613",
-    "url": "/video_monkey/static/css/3.4efdc3ef.chunk.css"
+    "revision": "c52dee14bc28c58beef0",
+    "url": "/video_monkey/static/css/2.1ce32a85.chunk.css"
   },
   {
-    "revision": "9b8d9498540d2bd40990",
-    "url": "/video_monkey/static/css/main.b358b7ac.chunk.css"
+    "revision": "cc276749144cf29dbd7b",
+    "url": "/video_monkey/static/css/3.86b4b30f.chunk.css"
   },
   {
-    "revision": "23331f7d0d37ffca16f4",
-    "url": "/video_monkey/static/js/2.b3909c68.chunk.js"
+    "revision": "9ca8254fbc934906bf20",
+    "url": "/video_monkey/static/css/main.000a0050.chunk.css"
   },
   {
-    "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/video_monkey/static/js/2.b3909c68.chunk.js.LICENSE.txt"
+    "revision": "c52dee14bc28c58beef0",
+    "url": "/video_monkey/static/js/2.3d11ac8c.chunk.js"
   },
   {
-    "revision": "c0b9a7c8206be6399613",
-    "url": "/video_monkey/static/js/3.541cf7f5.chunk.js"
+    "revision": "cacaf3f01dd3bd8237006f7c58951c1c",
+    "url": "/video_monkey/static/js/2.3d11ac8c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9b8d9498540d2bd40990",
-    "url": "/video_monkey/static/js/main.84ac8dc9.chunk.js"
+    "revision": "cc276749144cf29dbd7b",
+    "url": "/video_monkey/static/js/3.b50ca657.chunk.js"
   },
   {
-    "revision": "4e9a4e977784e5b1b7c2",
-    "url": "/video_monkey/static/js/runtime-main.b557ea3c.js"
+    "revision": "9ca8254fbc934906bf20",
+    "url": "/video_monkey/static/js/main.f70fc7b2.chunk.js"
+  },
+  {
+    "revision": "1fcf59fa48e8a98f13b8",
+    "url": "/video_monkey/static/js/runtime-main.e29f6fe7.js"
   },
   {
     "revision": "472316058a24faeddb2eae681d910940",
@@ -62,6 +66,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "09ffabe28fa2d3f63da82b39ec492d46",
     "url": "/video_monkey/static/media/checkedGreen.09ffabe2.svg"
+  },
+  {
+    "revision": "61f59112b5a222b3429842e11113f555",
+    "url": "/video_monkey/static/media/community.61f59112.png"
   },
   {
     "revision": "eb45b08f9c6f90ae46cfea0cb3c60368",
