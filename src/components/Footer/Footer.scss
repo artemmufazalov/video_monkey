@@ -8,6 +8,7 @@
   justify-content: space-between;
 
   min-width: 100vw;
+  width: max-content;
   height: 150px;
 
   background-color: $green;
@@ -39,6 +40,9 @@
           text-decoration: none;
           white-space: nowrap;
           color: black;
+        }
+        a:hover, a:focus{
+          color: $hoverColor;
         }
       }
     }
@@ -91,6 +95,9 @@
       height: 40px;
       margin-right: 10px;
       margin-left: 10px;
+    }
+    a img:hover, a img:focus {
+      filter: $hoverFilterForBlack;
     }
   }
 }

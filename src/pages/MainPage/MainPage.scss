@@ -62,6 +62,12 @@
           width: 302px;
           height: 56px;
 
+          border: 1px $green solid;
+        }
+        .mainPage__top__content__tryButton:hover,
+        .mainPage__top__content__tryButton:focus{
+          background-color: $brightGreen;
+          filter: saturate(70%);
         }
       }
     }
@@ -263,6 +269,11 @@
         font-size: 22px;
         line-height: 32px;
         letter-spacing: 0.128571px;
+      }
+      &__button:hover,
+      &__button:focus{
+        background-color: $brightGreen;
+        filter: saturate(70%);
       }
     }
   }

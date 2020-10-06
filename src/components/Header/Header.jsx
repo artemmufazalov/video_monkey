@@ -10,8 +10,8 @@ const Header = () => {
             <span className="header__left">
                 <div className="header__left__appLogo">
                     <NavLink to={"/"}>
-                        <img src={monkeyLogo}
-                             alt={"monkey logo"}/>
+                      <img src={monkeyLogo}
+                           alt={"monkey logo"}/>
                     </NavLink>
                 </div>
 

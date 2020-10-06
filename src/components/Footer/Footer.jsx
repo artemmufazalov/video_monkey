@@ -4,7 +4,6 @@ import {NavLink} from "react-router-dom";
 import "./Footer.scss";
 import {facebookLogo, headphonesIcon, instagramLogo, vkLogo, youtubeLogo} from "../../assets";
 
-
 const Footer = () => {
     return (
         <footer className={"footer"}>

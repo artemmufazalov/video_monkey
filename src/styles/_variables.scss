@@ -6,4 +6,9 @@ $brightGreen: #38D302;
 $black: #000000;
 $semiBlack: #3C3322;
 $blue: rgb(233, 252, 255);
-$headerHoverColor: brown;
+
+//colors and filters for hovers
+$hoverColor: brown;
+$hoverFilterForBlack: invert(27%) sepia(21%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+$hoverFilterForSemiBlack: invert(47%) sepia(16%) saturate(2878%) hue-rotate(346deg) brightness(74%) contrast(97%);
+
