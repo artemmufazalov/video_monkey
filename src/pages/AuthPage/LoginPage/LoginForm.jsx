@@ -5,6 +5,9 @@ import {UserOutlined, LockOutlined} from '@ant-design/icons';
 
 import validateForm from "../../../utils/helpers/validateForm";
 
+//TODO: create an error field under submit button
+//TODO: redirect to verify page if user wasn't confirmed
+
 const LoginForm = (props) => {
 
     const {
@@ -73,7 +76,8 @@ const LoginForm = (props) => {
 
                         <Form.Item>
                             <Button type="primary" htmlType="submit"
-                                    size={"large"} onClick={handleSubmit}>
+                                    size={"large"} onClick={handleSubmit}
+                                    disabled={isSubmitting}>
                                 Войти в аккаунт
                             </Button>
                         </Form.Item>

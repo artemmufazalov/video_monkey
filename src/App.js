@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import MainPage from "./pages/MainPage/MainPage";
 import AuthPage from "./pages/AuthPage/AuthPage";
 import store from "./BLL/store/store";
+import EmailConfirmation from "./pages/AuthPage/EmailConfirmation/EmailConfirmationContainer";
 
 const NotFound = React.lazy(() => import("./pages/NotFoundPage/NotFound"));
 
@@ -19,7 +20,6 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0, 0);
         window.addEventListener("unhandledrejection", this.catchAllUnhandledErrors);
     }
 
@@ -41,6 +41,12 @@ class App extends React.Component {
                             <Route path={"/profile"} render={() => <Redirect to={"/login"}/>}/>
 
                             <Route path={["/register", "/login"]} render={() => <AuthPage/>}/>
+
+                            <Route exact path={"/register/verify"} render={()=><EmailConfirmation initial/>}/>
+
+                            <Route exact path={"/register/verify/reject"} render={() => <EmailConfirmation option={"reject"}/>}/>
+
+                            <Route exact path={"/register/verify/submit"} render={() => <EmailConfirmation option={"submit"}/>}/>
 
                             <Route path="*" render={() => <NotFound/>}/>
                         </Switch>

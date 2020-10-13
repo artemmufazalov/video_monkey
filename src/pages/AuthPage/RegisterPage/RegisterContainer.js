@@ -1,9 +1,13 @@
 import RegisterForm from "./RegisterForm";
 import {withFormik} from "formik";
+import {connect} from "react-redux";
+import {compose} from "redux";
+import React from "react";
 
+import {register} from "../../../BLL/reducers/profileReducer";
 import validateForm from "../../../utils/validate/validate";
 
-export default withFormik({
+const formikConfig = {
     enableReinitialize: true,
     mapPropsToValues: values => ({
         email: "",
@@ -16,11 +20,21 @@ export default withFormik({
         validateForm({isAuth: false, errors, values});
         return errors;
     },
-
-    handleSubmit: (values, {setSubmitting}) => {
-        setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-        }, 1000);
+    handleSubmit: (values, formikBag) => {
+        formikBag.props.register(values.email, values.name, values.password);
     }
-})(RegisterForm);
+}
+
+const mapStateToProps = (state) => ({
+    isRegistrationSuccessful: state.userProfile.isRegistrationSuccessful,
+    isRegistrationFetching: state.userProfile.isFetching.isRegistrationFetching,
+    registrationError: state.userProfile.errors.registrationError,
+    registrationErrorMessage: state.userProfile.errors.registrationErrorMessage
+});
+
+export default compose(
+    connect(mapStateToProps, {
+        register
+    }),
+    withFormik(formikConfig)
+)(props => <RegisterForm {...props}/>);

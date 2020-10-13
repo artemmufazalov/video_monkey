@@ -1,5 +1,6 @@
 @import '~antd/dist/antd.css';
 @import '~reset-css';
+@import "./_variables.scss";
 
 .app-wrapper {
   min-height: 101vh;
@@ -17,5 +18,6 @@
   &__mainContent{
     grid-area: mainContent;
     min-height: 84vh;
+    background-color: $blue;
   }
 }
