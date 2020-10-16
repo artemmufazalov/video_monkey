@@ -1,28 +1,82 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {compose} from "redux";
+import connect from "react-redux";
 import {withRouter} from "react-router-dom";
 
 import EmailConfirmation from "./EmailConfirmation";
+import {cancelRegistration, verifyUser} from "../../../BLL/reducers/profileReducer";
 
-//TODO: create component versions for following cases:
-//1.Some server error, user was created, but email wasn't sent
-//2.Successful registration, awaiting for email to be sent
-//3.Confirmation submit through email, awaiting server response
-//4. Confirmation reject through email, giving options either reject or submit (=>3)
-//5. Reject awaiting confirmation from the server
-//6. Successful reject, user profile was deleted
-//7. Notify that confirmation wasn't passed, ask for options (reject => 5 or submit => 2) [при переходе из Логина]
-
-//TODO: wrap container with connect function
-
-const EmailConfirmationContainer = (props) => {
+const EmailConfirmationContainer = React.memo((props) => {
 
     const hash = props.match.query.hash;
 
+    const {
+        isRegistrationCancelSuccessful,
+        isRegistrationCancelFetching,
+        isConfirmationFetching,
+        emailVerificationError,
+        registrationCancelError,
+        option,
+        verifyUser,
+        cancelRegistration
+    } = props;
+
+    const [newOption, setOption] = useState(option);
+
+    useEffect(() => {
+        if (isRegistrationCancelFetching) {
+            setOption("reject--pending");
+        }
+        if (isRegistrationCancelSuccessful) {
+            setOption("reject--success")
+        }
+        if (emailVerificationError || registrationCancelError) {
+            setOption("error");
+        }
+        if (!isConfirmationFetching && option === "submit") {
+            verifyUser(hash)
+        }
+        if (!isRegistrationCancelFetching && option === "reject") {
+            cancelRegistration(hash)
+        }
+    }, [isRegistrationCancelSuccessful,
+        isRegistrationCancelFetching,
+        isConfirmationFetching,
+        emailVerificationError,
+        registrationCancelError,
+        option,
+        hash,
+        verifyUser,
+        cancelRegistration
+    ])
+
+    const onCancelRegistration = () => {
+        cancelRegistration(hash);
+    }
+    const onVerifyUser = () => {
+        verifyUser(hash);
+    }
+
     return (
-        <EmailConfirmation initial={props.initial} option={props.option}/>
+        <EmailConfirmation option={newOption}
+                           onCancelRegistration={onCancelRegistration}
+                           onSendVerificationEmail={onVerifyUser}/>
     );
-}
+});
+
+const mapStateToProps = (state) => ({
+    isRegistrationCancelSuccessful: state.userProfile.isRegistrationCancelSuccessful,
+    isRegistrationCancelFetching: state.userProfile.isFetching.isRegistrationCancelFetching,
+    isConfirmationFetching: state.userProfile.isFetching.isConfirmationFetching,
+    emailVerificationError: state.userProfile.errors.emailVerificationError,
+    registrationCancelError: state.userProfile.errors.registrationCancelError
+});
 
 
-export default compose(withRouter)(EmailConfirmationContainer);
+export default compose(
+    connect(mapStateToProps, {
+        cancelRegistration,
+        verifyUser,
+    }),
+    withRouter
+)(EmailConfirmationContainer);

@@ -10,11 +10,21 @@ const axiosInstance = axios.create({
     }
 );
 
-//TODO: finish API methods, so they will work with all possible status codes, returning data
-
 export const UserAPI = {
     authMe() {
-        return axiosInstance.get("user/me");
+        return axiosInstance.get("user/me")
+            .then((response) => {
+                return {
+                    data: response.data,
+                    status: response.status
+                }
+            })
+            .catch(error => {
+                return {
+                    data: error.response.data,
+                    status: error.response.status
+                }
+            });
     },
 
     register(email, name, password) {
@@ -38,29 +48,101 @@ export const UserAPI = {
     login(email, password) {
         return axiosInstance.post("user/login", {
             email, password
-        });
+        })
+            .then((response) => {
+                return {
+                    data: response.data,
+                    status: response.status
+                }
+            })
+            .catch(error => {
+                return {
+                    data: error.response.data,
+                    status: error.response.status
+                }
+            });
     },
 
     logout() {
-        return axiosInstance.delete("user/logout");
+        return axiosInstance.delete("user/logout")
+            .then((response) => {
+                return {
+                    data: response.data,
+                    status: response.status
+                }
+            })
+            .catch(error => {
+                return {
+                    data: error.response.data,
+                    status: error.response.status
+                }
+            });
     },
 
     deleteUser() {
-        return axiosInstance.delete("user");
+        return axiosInstance.delete("user")
+            .then((response) => {
+                return {
+                    data: response.data,
+                    status: response.status
+                }
+            })
+            .catch(error => {
+                return {
+                    data: error.response.data,
+                    status: error.response.status
+                }
+            });
     },
 
     verifyUser(hash) {
-        return axiosInstance.get(`user/verify?hash=${hash}`);
+        return axiosInstance.get(`user/verify?hash=${hash}`)
+            .then((response) => {
+                return {
+                    data: response.data,
+                    status: response.status
+                }
+            })
+            .catch(error => {
+                return {
+                    data: error.response.data,
+                    status: error.response.status
+                }
+            });
     },
 
     cancelRegistration(hash) {
-        return axiosInstance.delete(`user/verify?hash=${hash}`);
+        return axiosInstance.delete(`user/verify?hash=${hash}`)
+            .then((response) => {
+                return {
+                    data: response.data,
+                    status: response.status
+                }
+            })
+            .catch(error => {
+                return {
+                    data: error.response.data,
+                    status: error.response.status
+                }
+            });
     },
 
     resendConfirmationEmail(email) {
         return axiosInstance.post(`user/verify/email`, {
             email
-        });
+        })
+            .then((response) => {
+                return {
+                    data: response.data,
+                    status: response.status
+                }
+            })
+            .catch(error => {
+                return {
+                    data: error.response.data,
+                    status: error.response.status
+                }
+            });
     }
 
 }

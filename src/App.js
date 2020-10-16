@@ -1,6 +1,6 @@
 import React, {Suspense} from 'react';
-import {Redirect, Switch, Route, HashRouter} from "react-router-dom";
-import {Provider} from "react-redux";
+import {Switch, Route, HashRouter} from "react-router-dom";
+import {connect, Provider} from "react-redux";
 
 import "./styles/index.scss";
 import Preloader from "./components/Preloader/Preloader";
@@ -9,7 +9,8 @@ import Footer from "./components/Footer/Footer";
 import MainPage from "./pages/MainPage/MainPage";
 import AuthPage from "./pages/AuthPage/AuthPage";
 import store from "./BLL/store/store";
-import EmailConfirmation from "./pages/AuthPage/EmailConfirmation/EmailConfirmationContainer";
+import {auth} from "./BLL/reducers/profileReducer";
+import ProfilePage from "./pages/Profile/ProfilePageContainer";
 
 const NotFound = React.lazy(() => import("./pages/NotFoundPage/NotFound"));
 
@@ -21,6 +22,7 @@ class App extends React.Component {
 
     componentDidMount() {
         window.addEventListener("unhandledrejection", this.catchAllUnhandledErrors);
+        auth();
     }
 
     componentWillUnmount() {
@@ -38,15 +40,9 @@ class App extends React.Component {
                         <Switch>
                             <Route path="/" exact render={() => <MainPage/>}/>
 
-                            <Route path={"/profile"} render={() => <Redirect to={"/login"}/>}/>
+                            <Route path={"/profile"} render={() => <ProfilePage/>}/>
 
                             <Route path={["/register", "/login"]} render={() => <AuthPage/>}/>
-
-                            <Route exact path={"/register/verify"} render={()=><EmailConfirmation initial/>}/>
-
-                            <Route exact path={"/register/verify/reject"} render={() => <EmailConfirmation option={"reject"}/>}/>
-
-                            <Route exact path={"/register/verify/submit"} render={() => <EmailConfirmation option={"submit"}/>}/>
 
                             <Route path="*" render={() => <NotFound/>}/>
                         </Switch>
@@ -59,11 +55,15 @@ class App extends React.Component {
     }
 }
 
+const AppContainer = connect({}, {
+    auth
+})(App);
+
 const MonkeyApp = () => {
     return (
         <HashRouter>
             <Provider store={store}>
-                <App/>
+                <AppContainer/>
             </Provider>
         </HashRouter>
     );

@@ -36,3 +36,7 @@ export {default as notFoundImg} from "./photos/404notFound.jpg";
 
 //Auth page
 export {default as communityImg} from "./photos/community.png";
+export {default as serverErrorIcon} from "./svgIcons/greenServerError.svg";
+export {default as errorCrossIcon} from "./svgIcons/errorCross.svg";
+export {default as registrationReject} from "./svgIcons/registrationReject.svg";
+export {default as submitIcon} from "./svgIcons/submit.svg";
