@@ -22,7 +22,7 @@ class App extends React.Component {
 
     componentDidMount() {
         window.addEventListener("unhandledrejection", this.catchAllUnhandledErrors);
-        auth();
+        this.props.auth();
     }
 
     componentWillUnmount() {
@@ -55,7 +55,7 @@ class App extends React.Component {
     }
 }
 
-const AppContainer = connect({}, {
+const AppContainer = connect(null, {
     auth
 })(App);
 

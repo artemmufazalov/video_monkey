@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from "react";
 import {compose} from "redux";
-import connect from "react-redux";
-import {withRouter} from "react-router-dom";
+import {connect} from "react-redux";
+import {Redirect, withRouter} from "react-router-dom";
 
 import EmailConfirmation from "./EmailConfirmation";
 import {cancelRegistration, verifyUser} from "../../../BLL/reducers/profileReducer";
 
 const EmailConfirmationContainer = React.memo((props) => {
 
-    const hash = props.match.query.hash;
+    const hash = props.location.search.replace("?hash=", "");
 
     const {
         isRegistrationCancelSuccessful,
@@ -18,7 +18,8 @@ const EmailConfirmationContainer = React.memo((props) => {
         registrationCancelError,
         option,
         verifyUser,
-        cancelRegistration
+        cancelRegistration,
+        isLoggedIn
     } = props;
 
     const [newOption, setOption] = useState(option);
@@ -36,9 +37,7 @@ const EmailConfirmationContainer = React.memo((props) => {
         if (!isConfirmationFetching && option === "submit") {
             verifyUser(hash)
         }
-        if (!isRegistrationCancelFetching && option === "reject") {
-            cancelRegistration(hash)
-        }
+
     }, [isRegistrationCancelSuccessful,
         isRegistrationCancelFetching,
         isConfirmationFetching,
@@ -57,10 +56,16 @@ const EmailConfirmationContainer = React.memo((props) => {
         verifyUser(hash);
     }
 
+    if (isLoggedIn) {
+        return (
+            <Redirect to={"/profile"}/>
+        );
+    }
+
     return (
         <EmailConfirmation option={newOption}
                            onCancelRegistration={onCancelRegistration}
-                           onSendVerificationEmail={onVerifyUser}/>
+                           onVerifyUser={onVerifyUser}/>
     );
 });
 
@@ -69,7 +74,8 @@ const mapStateToProps = (state) => ({
     isRegistrationCancelFetching: state.userProfile.isFetching.isRegistrationCancelFetching,
     isConfirmationFetching: state.userProfile.isFetching.isConfirmationFetching,
     emailVerificationError: state.userProfile.errors.emailVerificationError,
-    registrationCancelError: state.userProfile.errors.registrationCancelError
+    registrationCancelError: state.userProfile.errors.registrationCancelError,
+    isLoggedIn: state.userProfile.isLoggedIn
 });
 
 

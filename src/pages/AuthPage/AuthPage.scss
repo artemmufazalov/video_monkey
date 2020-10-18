@@ -120,6 +120,7 @@
           }
 
           h3 {
+            text-align: center;
             margin-top: 15px;
             margin-bottom: 10px;
 
@@ -129,8 +130,8 @@
 
           p {
             font-weight: 300;
-            font-size: 14px;
-            line-height: 18px;
+            font-size: 16px;
+            line-height: 22px;
             text-align: center;
             letter-spacing: 0.1px;
             color: rgba(0, 0, 0, 0.5);
@@ -139,8 +140,8 @@
           b{
             font-weight: normal;
             color: $green;
-            font-size: 14px;
-            line-height: 18px;
+            font-size: 16px;
+            line-height: 22px;
             cursor: pointer;
           }
         }

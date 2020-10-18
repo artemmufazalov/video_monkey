@@ -4,11 +4,13 @@ import configs from "../../configs/configs";
 
 const axiosInstance = axios.create({
         baseURL: configs.BASE_URL,
-        headers: {
-            [window.localStorage.token && "token"]: window.localStorage.token
-        }
+        headers: {},
     }
 );
+
+if (window.localStorage.token && window.localStorage.token !== "undefined") {
+    axiosInstance.defaults.headers.common['token'] = window.localStorage.token;
+}
 
 export const UserAPI = {
     authMe() {

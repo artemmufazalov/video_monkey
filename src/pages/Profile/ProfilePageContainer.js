@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 import {compose} from "redux";
-import Redirect from "react-router-dom";
+import {Redirect} from "react-router-dom";
 
 import ProfilePage from "./ProfilePage";
 
@@ -28,7 +28,7 @@ const ProfilePageContainer = (props) => {
 
 const mapStateToProps = (state) => ({
     isLoggedIn: state.userProfile.isLoggedIn,
-    isVerified: state.userProfile.user.isVerified
+    isVerified: state.userProfile.authUserData.isVerified
 })
 
 export default compose(connect(mapStateToProps, {}))(ProfilePageContainer);

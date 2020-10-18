@@ -58,12 +58,10 @@ const EmailConfirmationContentView = ({option, onCancelRegistration, onVerifyUse
 
                     <div className={"auth__container__form__block--confirmation"}>
                         <img src={registrationReject} alt="Registration reject"/>
-                        <h3>
-                            Отмена регистрации
-                        </h3>
+                        <br/>
                         <p>
                             Вы уверены, что хотите отменить регистацию? Для удаления аккаунта, перейдите
-                            <b onClick={onCancelRegistration}>по ссылке</b>.
+                            <b onClick={onCancelRegistration}> по ссылке</b>.
                             Если вы хотите продолжить регистацию, то <b onClick={onVerifyUser}>перейдите
                             сюда</b>.
                         </p>
@@ -72,6 +70,7 @@ const EmailConfirmationContentView = ({option, onCancelRegistration, onVerifyUse
                 </div>
             );
         case "reject--success":
+
             return (
                 <div className={"auth__container__form__block"}>
 
@@ -84,6 +83,8 @@ const EmailConfirmationContentView = ({option, onCancelRegistration, onVerifyUse
                         <h3>
                             Аккаунт был успешно удален
                         </h3>
+                        <br/>
+                        <p><b>На главную</b></p>
                     </div>
 
                 </div>
@@ -173,7 +174,7 @@ const EmailConfirmation = ({option, onCancelRegistration, onVerifyUser}) => {
             <div className={"auth__container__form"}>
 
                 <EmailConfirmationContentView option={option} onCancelRegistration={onCancelRegistration}
-                                              onSendVerificationEmail={onVerifyUser}/>
+                                              onVerifyUser={onVerifyUser}/>
 
             </div>
 

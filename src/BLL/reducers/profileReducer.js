@@ -192,13 +192,20 @@ const logoutUser = () =>
 
 //Thunks
 export const auth = () => async (dispatch) => {
-    if (window.localStorage.token) {
-        let responseData = await UserAPI.authMe();
-        if (responseData.resultCode === 0 || responseData.status === 200) {
-            dispatch(authUser(responseData.data.user.email, responseData.data.user.name, responseData.data.user.confirmed))
-        } else if (responseData.message === "Token is invalid or expired" || responseData.status === 401) {
-            delete window.localStorage.token;
+    if (window.localStorage.token && window.localStorage.token !== "undefined") {
+        try {
+            let responseData = await UserAPI.authMe();
+            if (responseData.data.resultCode === 0 || responseData.status === 200) {
+                dispatch(authUser(responseData.data.user.email, responseData.data.user.name, responseData.data.user.confirmed));
+                console.log("Successful authentication");
+            } else if (responseData.message === "Token is invalid or expired" || responseData.status === 401) {
+                delete window.localStorage.token;
+                console.log("Authentication token is invalid or expired");
+            }
+        } catch (err) {
+            console.log("Unsuccessful authentication: " + err);
         }
+
     }
 }
 
@@ -206,8 +213,8 @@ const login = (email, password) => async (dispatch) => {
     dispatch(setLoginIsFetching(true));
     try {
         let responseData = await UserAPI.login(email, password);
-        if (responseData.resultCode === 0 || responseData.status === 200) {
-            window.localStorage['token'] = responseData.data.token;
+        if (responseData.data.resultCode === 0 || responseData.status === 200) {
+            window.localStorage.token = responseData.data.token;
             dispatch(authUser(email, responseData.data.user.name, responseData.data.user.confirmed));
         } else {
             dispatch(setLoginError(true, responseData.data.message))
@@ -221,7 +228,7 @@ const login = (email, password) => async (dispatch) => {
 
 const logout = () => async (dispatch) => {
     let responseData = await UserAPI.logout();
-    if (responseData.resultCode === 0 || responseData.status === 200) {
+    if (responseData.data.resultCode === 0 || responseData.status === 200) {
         delete window.localStorage.token;
         dispatch(logoutUser());
     }
@@ -253,8 +260,8 @@ export const register = (email, name, password) => async (dispatch) => {
 export const verifyUser = (hash) => async (dispatch) => {
     dispatch(setEmailConfirmationIsFetching(true));
     let responseData = await UserAPI.verifyUser(hash)
-    if (responseData.result.code === 0 || responseData.status === 200) {
-        window.localStorage['token'] = responseData.data.token;
+    if (responseData.data.resultCode === 0 || responseData.status === 200) {
+        window.localStorage.token = responseData.data.token;
         dispatch(authUser(responseData.data.user.email, responseData.data.user.name, responseData.data.user.confirmed));
     } else {
         dispatch(setEmailVerificationError(true));
@@ -264,7 +271,7 @@ export const verifyUser = (hash) => async (dispatch) => {
 export const cancelRegistration = (hash) => async (dispatch) => {
     dispatch(setRegistrationCancelIsFetching(true));
     let responseData = await UserAPI.cancelRegistration(hash)
-    if (responseData.result.code === 0 || responseData.status === 200) {
+    if (responseData.data.resultCode === 0 || responseData.status === 200) {
         dispatch(setRegistrationCancelSuccess(true));
     } else {
         dispatch(setRegistrationCancelError(true));
