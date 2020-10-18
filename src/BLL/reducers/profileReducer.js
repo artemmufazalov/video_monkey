@@ -180,7 +180,7 @@ const setRegistrationCancelError = (isRegistrationCancelError) =>
 const setRegistrationError = (isRegistrationError, message) =>
     ({type: SET_REGISTRATION_ERROR, isRegistrationError, message});
 const setLoginError = (isLoginError, loginErrorMessage) =>
-    ({type: SET_REGISTRATION_ERROR, isLoginError, loginErrorMessage});
+    ({type: SET_LOGIN_ERROR, isLoginError, loginErrorMessage});
 const setLoginIsFetching = (isLoginFetching) =>
     ({type: SET_LOGIN_FETCHING, isLoginFetching});
 const setEmailVerificationError = (isEmailVerificationError) =>
@@ -209,7 +209,8 @@ export const auth = () => async (dispatch) => {
     }
 }
 
-const login = (email, password) => async (dispatch) => {
+export const login = (email, password) => async (dispatch) => {
+    dispatch(setLoginError(false, ""))
     dispatch(setLoginIsFetching(true));
     try {
         let responseData = await UserAPI.login(email, password);
@@ -226,7 +227,7 @@ const login = (email, password) => async (dispatch) => {
     }
 }
 
-const logout = () => async (dispatch) => {
+export const logout = () => async (dispatch) => {
     let responseData = await UserAPI.logout();
     if (responseData.data.resultCode === 0 || responseData.status === 200) {
         delete window.localStorage.token;
@@ -278,4 +279,15 @@ export const cancelRegistration = (hash) => async (dispatch) => {
     }
     dispatch(setRegistrationCancelIsFetching(false));
 
+}
+
+export const resendVerificationEmail = (email) => async (dispatch) =>{
+    dispatch(setEmailConfirmationIsFetching(true));
+    dispatch(setEmailVerificationError(false));
+    let responseData = await UserAPI.resendConfirmationEmail(email)
+    if (responseData.data.resultCode === 0 || responseData.status === 200) {
+        dispatch(authUser(responseData.data.user.email, responseData.data.user.name, responseData.data.user.confirmed));
+    } else {
+        dispatch(setEmailVerificationError(true));
+    }
 }

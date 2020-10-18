@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 import {Redirect, withRouter} from "react-router-dom";
 
 import EmailConfirmation from "./EmailConfirmation";
-import {cancelRegistration, verifyUser} from "../../../BLL/reducers/profileReducer";
+import {cancelRegistration, resendVerificationEmail, verifyUser} from "../../../BLL/reducers/profileReducer";
 
 const EmailConfirmationContainer = React.memo((props) => {
 
@@ -19,7 +19,9 @@ const EmailConfirmationContainer = React.memo((props) => {
         option,
         verifyUser,
         cancelRegistration,
-        isLoggedIn
+        resendVerificationEmail,
+        isLoggedIn,
+        authUserData
     } = props;
 
     const [newOption, setOption] = useState(option);
@@ -37,6 +39,9 @@ const EmailConfirmationContainer = React.memo((props) => {
         if (!isConfirmationFetching && option === "submit") {
             verifyUser(hash)
         }
+        if (!isConfirmationFetching && option === "login") {
+            resendVerificationEmail(authUserData.email)
+        }
 
     }, [isRegistrationCancelSuccessful,
         isRegistrationCancelFetching,
@@ -46,7 +51,9 @@ const EmailConfirmationContainer = React.memo((props) => {
         option,
         hash,
         verifyUser,
-        cancelRegistration
+        cancelRegistration,
+        authUserData,
+        resendVerificationEmail
     ])
 
     const onCancelRegistration = () => {
@@ -56,20 +63,17 @@ const EmailConfirmationContainer = React.memo((props) => {
         verifyUser(hash);
     }
 
-    if (isLoggedIn) {
-        return (
-            <Redirect to={"/profile"}/>
-        );
-    }
-
     return (
         <EmailConfirmation option={newOption}
                            onCancelRegistration={onCancelRegistration}
-                           onVerifyUser={onVerifyUser}/>
+                           onVerifyUser={onVerifyUser}
+                           isLoggedIn={isLoggedIn}
+                           isVerified={authUserData.isVerified}/>
     );
 });
 
 const mapStateToProps = (state) => ({
+    authUserData: state.userProfile.authUserData,
     isRegistrationCancelSuccessful: state.userProfile.isRegistrationCancelSuccessful,
     isRegistrationCancelFetching: state.userProfile.isFetching.isRegistrationCancelFetching,
     isConfirmationFetching: state.userProfile.isFetching.isConfirmationFetching,
@@ -83,6 +87,7 @@ export default compose(
     connect(mapStateToProps, {
         cancelRegistration,
         verifyUser,
+        resendVerificationEmail
     }),
     withRouter
 )(EmailConfirmationContainer);

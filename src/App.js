@@ -22,7 +22,8 @@ class App extends React.Component {
 
     componentDidMount() {
         window.addEventListener("unhandledrejection", this.catchAllUnhandledErrors);
-        this.props.auth();
+        if (!this.props.isLoggedIn)
+            this.props.auth();
     }
 
     componentWillUnmount() {
@@ -55,7 +56,11 @@ class App extends React.Component {
     }
 }
 
-const AppContainer = connect(null, {
+const mapStateToProps = (state) => ({
+    isLoggedIn: state.userProfile.isLoggedIn
+})
+
+const AppContainer = connect(mapStateToProps, {
     auth
 })(App);
 

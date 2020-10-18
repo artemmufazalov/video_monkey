@@ -2,10 +2,31 @@ import React from 'react';
 import {InfoCircleOutlined} from '@ant-design/icons';
 
 import {errorCrossIcon, registrationReject, serverErrorIcon, submitIcon} from "../../../assets";
+import {Redirect} from "react-router-dom";
 
 const EmailConfirmationContentView = ({option, onCancelRegistration, onVerifyUser}) => {
     switch (option) {
         case "initial":
+            return (
+                <div className={"auth__container__form__block"}>
+
+                    <div className={"auth__container__form__heading"}>
+                        <h2>Подтвердить аккаунт</h2>
+                    </div>
+
+                    <div className={"auth__container__form__block--confirmation"}>
+                        <InfoCircleOutlined/>
+                        <h3>
+                            Требуется подтверждение аккаунта
+                        </h3>
+                        <p>
+                            На Вашу почту отправлено письмо с ссылкой для подтверждение аккаунта.
+                        </p>
+                    </div>
+
+                </div>
+            );
+
         case "login":
             return (
                 <div className={"auth__container__form__block"}>
@@ -154,7 +175,13 @@ const EmailConfirmationContentView = ({option, onCancelRegistration, onVerifyUse
     }
 }
 
-const EmailConfirmation = ({option, onCancelRegistration, onVerifyUser}) => {
+const EmailConfirmation = ({option, onCancelRegistration, onVerifyUser,isLoggedIn,isVerified}) => {
+
+    if (isLoggedIn && isVerified) {
+        return (
+            <Redirect to={"/profile"}/>
+        );
+    }
 
     return (
         <div className={"auth__container"}>

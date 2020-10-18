@@ -1,12 +1,9 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 import {Form,Input,Button} from "antd";
 import {UserOutlined, LockOutlined} from '@ant-design/icons';
 
 import validateForm from "../../../utils/helpers/validateForm";
-
-//TODO: create an error field under submit button
-//TODO: redirect to verify page if user wasn't confirmed
 
 const LoginForm = (props) => {
 
@@ -22,6 +19,12 @@ const LoginForm = (props) => {
         handleReset,
         isValid,
     } = props;
+
+    if (props.isLoggedIn && !props.isVerified && !window.location.href.toString().includes("/login/verify")) {
+        return (
+            <Redirect to={"/login/verify"}/>
+        );
+    }
 
     return (
         <div className={"auth__container"}>
@@ -77,10 +80,14 @@ const LoginForm = (props) => {
                         <Form.Item>
                             <Button type="primary" htmlType="submit"
                                     size={"large"} onClick={handleSubmit}
-                                    disabled={isSubmitting}>
+                                    disabled={props.isLoginFetching}>
                                 Войти в аккаунт
                             </Button>
                         </Form.Item>
+
+                        <div className="auth__container__form--error">
+                            {props.loginError && props.loginErrorMessage}
+                        </div>
 
                         <div className="auth__container__form__bottom">
                             <p>

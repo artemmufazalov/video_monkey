@@ -4,6 +4,7 @@ import {compose} from "redux";
 import {Redirect} from "react-router-dom";
 
 import ProfilePage from "./ProfilePage";
+import {logout} from "../../BLL/reducers/profileReducer";
 
 const ProfilePageContainer = (props) => {
 
@@ -13,22 +14,26 @@ const ProfilePageContainer = (props) => {
         );
     }
 
-    if (props.isLoggedIn && !props.isVerified) {
+    if (props.isLoggedIn && !props.authUserData.isVerified) {
         return (
-            <Redirect to={"/register/verify/submit"}/>
+            <Redirect to={`/login/verify`}/>
         );
     }
 
     return (
         <div>
-            <ProfilePage/>
+            <ProfilePage authUserData={props.authUserData}
+                         logout={props.logout}
+            />
         </div>
     );
 };
 
 const mapStateToProps = (state) => ({
     isLoggedIn: state.userProfile.isLoggedIn,
-    isVerified: state.userProfile.authUserData.isVerified
+    authUserData: state.userProfile.authUserData
 })
 
-export default compose(connect(mapStateToProps, {}))(ProfilePageContainer);
+export default compose(connect(mapStateToProps, {
+    logout
+}))(ProfilePageContainer);

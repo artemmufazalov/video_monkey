@@ -1,4 +1,4 @@
-import React, from 'react';
+import React from 'react';
 import {Redirect, Route, Switch} from "react-router-dom";
 import {connect} from "react-redux";
 
@@ -10,29 +10,19 @@ import EmailConfirmation from "./EmailConfirmation/EmailConfirmationContainer";
 
 const AuthPage = (props) => {
 
-    if (props.isLoggedIn && !props.isVerified) {
-        return (
-            <Redirect to={"/register/verify/submit"}/>
-        );
-    }
-
-    if (props.isLoggedIn) {
+    if (props.isLoggedIn && props.isVerified) {
         return (
             <Redirect to={"/profile"}/>
         );
     }
 
-    if (props.isLoggedIn && !props.isVerified) {
-        return (
-            <Redirect to={"/register/verify/submit"}/>
-        );
-    }
-
     return (
-        <section className={"auth"}>
+        <section
+            className={"auth"}>
             <div>
                 <Switch>
-                    <Route path={"/login/verify"} render={() => (<EmailConfirmation option={"login"}/>)}/>
+                    <Route path={"/login/verify"}
+                           render={() => (<EmailConfirmation option={"login"}/>)}/>
 
                     <Route path={"/login"} render={() => (<LoginForm/>)}/>
 
