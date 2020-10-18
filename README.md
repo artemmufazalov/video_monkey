@@ -3,10 +3,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 It was made using following stack of technologies:
-* React, SCSS
+* React, Redux
+* formik, react-redux, redux-thunk, axios
+* SCSS, Ant Design
 
 The working version of the app you can see and try via the link: https://artemmufazalov.github.io/video_monkey
 
+The backend part of the app is in the following repository: https://github.com/artemmufazalov/video_monkey_backend
 ### Run repository on your computer
 Use git clone command to download source code to your computer.
 ```
