@@ -1,39 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "04c8bbf1fa0c7d2d369555d82928889f",
+    "revision": "13545c667e37c4edb69cc2028349fba8",
     "url": "/video_monkey/index.html"
   },
   {
-    "revision": "8b5fd184ea21b46f46f5",
+    "revision": "20e74ce63b7208d0bd8f",
     "url": "/video_monkey/static/css/2.1ce32a85.chunk.css"
   },
   {
-    "revision": "d5e8e6ee95ff40d91f74",
+    "revision": "4d65926aed26d5bb85f7",
     "url": "/video_monkey/static/css/3.ce3f8e13.chunk.css"
   },
   {
-    "revision": "cfe3f26808efa61ecd31",
+    "revision": "323b64f8f26a54ddf4e8",
     "url": "/video_monkey/static/css/main.5fecd6ae.chunk.css"
   },
   {
-    "revision": "8b5fd184ea21b46f46f5",
-    "url": "/video_monkey/static/js/2.6332fa1a.chunk.js"
+    "revision": "20e74ce63b7208d0bd8f",
+    "url": "/video_monkey/static/js/2.abe93a55.chunk.js"
   },
   {
     "revision": "cacaf3f01dd3bd8237006f7c58951c1c",
-    "url": "/video_monkey/static/js/2.6332fa1a.chunk.js.LICENSE.txt"
+    "url": "/video_monkey/static/js/2.abe93a55.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d5e8e6ee95ff40d91f74",
-    "url": "/video_monkey/static/js/3.a01c525c.chunk.js"
+    "revision": "4d65926aed26d5bb85f7",
+    "url": "/video_monkey/static/js/3.87c8e378.chunk.js"
   },
   {
-    "revision": "cfe3f26808efa61ecd31",
-    "url": "/video_monkey/static/js/main.93bf51c8.chunk.js"
+    "revision": "323b64f8f26a54ddf4e8",
+    "url": "/video_monkey/static/js/main.44935262.chunk.js"
   },
   {
-    "revision": "8025e447c6233979ce46",
-    "url": "/video_monkey/static/js/runtime-main.723cb994.js"
+    "revision": "57554bafdad7d7c96118",
+    "url": "/video_monkey/static/js/runtime-main.5c16e1ce.js"
   },
   {
     "revision": "472316058a24faeddb2eae681d910940",
