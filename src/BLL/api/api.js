@@ -146,6 +146,25 @@ export const UserAPI = {
                 }
             });
     }
+}
 
+export const SupportAPI = {
+    sendComplaint(email, title, description, attachments) {
+        const formData = new FormData();
+        formData.append("email", email);
+        formData.append("title", title);
+        formData.append("description", description);
+
+        if (attachments && attachments.length > 0) {
+            for (let i = 0; i < attachments.length; i++) {
+                formData.append("file" + i, attachments[i]);
+            }
+        }
+        return axiosInstance.post('support/complaint', formData, {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            }
+        })
+    }
 }
 

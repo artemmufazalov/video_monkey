@@ -11,6 +11,7 @@ import AuthPage from "./pages/AuthPage/AuthPage";
 import store from "./BLL/store/store";
 import {auth} from "./BLL/reducers/profileReducer";
 import ProfilePage from "./pages/Profile/ProfilePageContainer";
+import SupportPage from "./pages/Support/SupportPageContainer";
 
 const NotFound = React.lazy(() => import("./pages/NotFoundPage/NotFound"));
 
@@ -44,6 +45,8 @@ class App extends React.Component {
                             <Route path={"/profile"} render={() => <ProfilePage/>}/>
 
                             <Route path={["/register", "/login"]} render={() => <AuthPage/>}/>
+
+                            <Route path={"/support"} render={()=><SupportPage/>}/>
 
                             <Route path="*" render={() => <NotFound/>}/>
                         </Switch>

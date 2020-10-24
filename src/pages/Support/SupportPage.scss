@@ -1,0 +1,174 @@
+$formBlue: #F5FDFF;
+$formBackgroundBlue: #E9FCFF;
+$formGray: #989797;
+
+.support {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  min-height: 84vh;
+  height: 100%;
+  width: 100%;
+
+  padding-bottom: 30px;
+
+  background: linear-gradient(103.67deg, rgba(219, 185, 240, 0) 16.86%, #C5D9E8 100%),
+  linear-gradient(253.04deg, rgba(255, 243, 243, 0) 23.83%, #D1BBED 87.05%), #E9FCFF;
+
+  font-family: Roboto, sans-serif;
+
+  &__heading {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    width: 80%;
+
+    font-weight: bold;
+
+    h1 {
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-areas:"email description"
+    "topicSelection description"
+    "attachments sendButton";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content 1fr max-content;
+    grid-gap: 20px;
+
+    min-width: max-content;
+    width: 80%;
+
+    padding: 20px;
+
+    background: $formBackgroundBlue;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    h2 {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    &__block {
+      background: $formBlue;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+      height: 100%;
+    }
+
+
+    &__email {
+      grid-area: email;
+
+      input {
+        background-color: $formBlue;
+      }
+    }
+
+    &__description {
+      grid-area: description;
+
+      padding-bottom: 35px;
+
+      textarea {
+        resize: none;
+        height: 100%;
+        background-color: $formBlue;
+      }
+    }
+
+    &__selections {
+      grid-area: topicSelection;
+
+
+      &__group {
+        display: flex;
+        flex-direction: column;
+
+        text-align: left;
+
+        padding: 10px 5px 5px 5px;
+
+        &__radio {
+          margin-bottom: 5px;
+          margin-left: 10px;
+        }
+
+        input {
+          margin-top: 5px;
+          width: 80%;
+          margin-left: 20px;
+        }
+
+        input, input:active, input:focus, input:disabled, input:hover, input:enabled {
+          box-shadow: 0 0 0;
+          border: 0;
+          border-bottom: 2px solid $formGray;
+          background-color: $formBlue;
+        }
+
+
+      }
+
+    }
+
+    &__attachments {
+      grid-area: attachments;
+
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      justify-items: start;
+
+      &__uploadButton,
+      &__uploadButton:active,
+      &__uploadButton:disabled,
+      &__uploadButton:hover,
+      &__uploadButton:enabled {
+        background-color: $formBlue;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+      }
+
+    }
+
+    &__sendButton {
+      grid-area: sendButton;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      width: 100%;
+
+      button {
+        align-self: flex-end;
+
+        width: max-content;
+      }
+
+      button,
+      button:active,
+      button:disabled,
+      button:hover,
+      button:enabled {
+        background-color: $formBlue;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}
