@@ -7,6 +7,9 @@ import {Redirect} from "react-router-dom";
 const EmailConfirmationContentView = ({option, onCancelRegistration, onVerifyUser}) => {
     switch (option) {
         case "initial":
+
+            document.title = "Подтверждение аккаунта - Video Monkey";
+
             return (
                 <div className={"auth__container__form__block"}>
 
@@ -28,6 +31,9 @@ const EmailConfirmationContentView = ({option, onCancelRegistration, onVerifyUse
             );
 
         case "login":
+
+            document.title = "Подтверждение аккаунта - Video Monkey";
+
             return (
                 <div className={"auth__container__form__block"}>
 
@@ -49,6 +55,9 @@ const EmailConfirmationContentView = ({option, onCancelRegistration, onVerifyUse
             );
 
         case "submit":
+
+            document.title = "Подтверждение аккаунта - Video Monkey";
+
             return (
                 <div className={"auth__container__form__block"}>
 
@@ -70,6 +79,9 @@ const EmailConfirmationContentView = ({option, onCancelRegistration, onVerifyUse
                 </div>
             );
         case "reject":
+
+            document.title = "Отмена регистрации - Video Monkey";
+
             return (
                 <div className={"auth__container__form__block"}>
 
@@ -92,6 +104,8 @@ const EmailConfirmationContentView = ({option, onCancelRegistration, onVerifyUse
             );
         case "reject--success":
 
+            document.title = "Отмена регистрации - Video Monkey";
+
             return (
                 <div className={"auth__container__form__block"}>
 
@@ -111,6 +125,9 @@ const EmailConfirmationContentView = ({option, onCancelRegistration, onVerifyUse
                 </div>
             );
         case "reject--pending":
+
+            document.title = "Отмена регистрации - Video Monkey";
+
             return (
                 <div className={"auth__container__form__block"}>
 
@@ -132,6 +149,9 @@ const EmailConfirmationContentView = ({option, onCancelRegistration, onVerifyUse
             );
 
         case "error":
+
+            document.title = "Ошибка сервера - Video Monkey";
+
             return (
                 <div className={"auth__container__form__block"}>
 
@@ -153,6 +173,9 @@ const EmailConfirmationContentView = ({option, onCancelRegistration, onVerifyUse
                 </div>
             );
         default:
+
+            document.title = "Ошибка - Video Monkey";
+
             return (
                 <div className={"auth__container__form__block"}>
 

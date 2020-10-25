@@ -8,6 +8,8 @@ import {logout} from "../../BLL/reducers/profileReducer";
 
 const ProfilePageContainer = (props) => {
 
+    document.title = "Профиль - Video Monkey";
+
     if (!props.isLoggedIn) {
         return (
             <Redirect to={"/login"}/>

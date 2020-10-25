@@ -26,6 +26,9 @@ const features = {
 }
 
 const MainPage = () => {
+
+    document.title = "Главная - Video Monkey";
+
     return (
         <div className={"mainPage"}>
             <section className={"mainPage__top"}>

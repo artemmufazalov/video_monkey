@@ -6,6 +6,9 @@ import "./NotFound.scss";
 
 
 const NotFound = () => {
+
+    document.title = "Страница не найдена - Video Monkey";
+
     return (
         <div className={"pageNotFoundWrapper"}>
             <img src={notFoundImg} alt="page not found"/>

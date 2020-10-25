@@ -194,7 +194,7 @@ const logoutUser = () =>
 export const auth = () => async (dispatch) => {
     if (window.localStorage.token && window.localStorage.token !== "undefined") {
         try {
-            let responseData = await UserAPI.authMe();
+            let responseData = await UserAPI().authMe();
             if (responseData.data.resultCode === 0 || responseData.status === 200) {
                 dispatch(authUser(responseData.data.user.email, responseData.data.user.name, responseData.data.user.confirmed));
                 console.log("Successful authentication");
@@ -213,7 +213,7 @@ export const login = (email, password) => async (dispatch) => {
     dispatch(setLoginError(false, ""))
     dispatch(setLoginIsFetching(true));
     try {
-        let responseData = await UserAPI.login(email, password);
+        let responseData = await UserAPI().login(email, password);
         if (responseData.data.resultCode === 0 || responseData.status === 200) {
             window.localStorage.token = responseData.data.token;
             dispatch(authUser(email, responseData.data.user.name, responseData.data.user.confirmed));
@@ -228,7 +228,7 @@ export const login = (email, password) => async (dispatch) => {
 }
 
 export const logout = () => async (dispatch) => {
-    let responseData = await UserAPI.logout();
+    let responseData = await UserAPI().logout();
     if (responseData.data.resultCode === 0 || responseData.status === 200) {
         delete window.localStorage.token;
         dispatch(logoutUser());
@@ -239,7 +239,7 @@ export const register = (email, name, password) => async (dispatch) => {
 
     dispatch(setRegistrationIsFetching(true));
     try {
-        let registerData = await UserAPI.register(email, name, password)
+        let registerData = await UserAPI().register(email, name, password)
         console.log(registerData);
         if (registerData.data.resultCode === 0 || registerData.status === 200) {
             dispatch(setRegistrationData(email));
@@ -260,7 +260,7 @@ export const register = (email, name, password) => async (dispatch) => {
 
 export const verifyUser = (hash) => async (dispatch) => {
     dispatch(setEmailConfirmationIsFetching(true));
-    let responseData = await UserAPI.verifyUser(hash)
+    let responseData = await UserAPI().verifyUser(hash)
     if (responseData.data.resultCode === 0 || responseData.status === 200) {
         window.localStorage.token = responseData.data.token;
         dispatch(authUser(responseData.data.user.email, responseData.data.user.name, responseData.data.user.confirmed));
@@ -271,7 +271,7 @@ export const verifyUser = (hash) => async (dispatch) => {
 
 export const cancelRegistration = (hash) => async (dispatch) => {
     dispatch(setRegistrationCancelIsFetching(true));
-    let responseData = await UserAPI.cancelRegistration(hash)
+    let responseData = await UserAPI().cancelRegistration(hash)
     if (responseData.data.resultCode === 0 || responseData.status === 200) {
         dispatch(setRegistrationCancelSuccess(true));
     } else {
@@ -284,7 +284,7 @@ export const cancelRegistration = (hash) => async (dispatch) => {
 export const resendVerificationEmail = (email) => async (dispatch) =>{
     dispatch(setEmailConfirmationIsFetching(true));
     dispatch(setEmailVerificationError(false));
-    let responseData = await UserAPI.resendConfirmationEmail(email)
+    let responseData = await UserAPI().resendConfirmationEmail(email)
     if (responseData.data.resultCode === 0 || responseData.status === 200) {
         dispatch(authUser(responseData.data.user.email, responseData.data.user.name, responseData.data.user.confirmed));
     } else {

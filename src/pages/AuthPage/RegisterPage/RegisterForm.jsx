@@ -7,6 +7,8 @@ import validateForm from "../../../utils/helpers/validateForm";
 
 const RegisterForm = (props) => {
 
+    document.title = "Регистрация - Video Monkey";
+
     const {
         values,
         touched,
