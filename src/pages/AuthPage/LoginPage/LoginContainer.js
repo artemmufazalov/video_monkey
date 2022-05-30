@@ -1,11 +1,11 @@
-import LoginForm from "./LoginForm";
+import React from "react";
+import {compose} from "redux";
+import {connect} from "react-redux";
 import {withFormik} from "formik";
 
 import validateForm from "../../../utils/validate/validate";
-import {compose} from "redux";
-import {connect} from "react-redux";
+import LoginForm from "./LoginForm";
 import {login} from "../../../BLL/reducers/profileReducer";
-import React from "react";
 
 const formikConfig = {
     enableReinitialize: true,

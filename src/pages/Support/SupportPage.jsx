@@ -12,7 +12,7 @@ const SupportPage = ({onFormUpload}) => {
     const [attachedFiles, addFiles] = useState([]);
 
     const onSelectRadio = e => {
-        selectOption(e.target.value);
+        selectOption(e.currentTarget.value);
     };
 
     return (
