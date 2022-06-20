@@ -1,15 +1,15 @@
 //Action Types
 
 //Initial State
-let initialState = {}
+let initialState = {};
 
 //Reducer
 const cartReducer = (state = initialState, action) => {
-    switch (action.type) {
-        default:
-            return state;
-    }
-}
+	switch (action.type) {
+		default:
+			return state;
+	}
+};
 
 export default cartReducer;
 

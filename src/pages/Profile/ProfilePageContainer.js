@@ -1,41 +1,43 @@
 import React from 'react';
-import {connect} from "react-redux";
-import {compose} from "redux";
-import {Redirect} from "react-router-dom";
+import { connect } from 'react-redux';
+import { compose } from 'redux';
+import { useNavigate } from 'react-router-dom';
 
-import ProfilePage from "./ProfilePage";
-import {logout} from "../../BLL/reducers/profileReducer";
+import ProfilePage from './ProfilePage';
+import { logout } from '../../BLL/reducers/profileReducer';
 
 const ProfilePageContainer = (props) => {
+	const navigate = useNavigate();
 
-    document.title = "Профиль - Video Monkey";
+	document.title = 'Профиль - Video Monkey';
 
-    if (!props.isLoggedIn) {
-        return (
-            <Redirect to={"/login"}/>
-        );
-    }
+	React.useEffect(() => {
+		if (!props.isLoggedIn) {
+			navigate('/login');
+		}
 
-    if (props.isLoggedIn && !props.authUserData.isVerified) {
-        return (
-            <Redirect to={`/login/verify`}/>
-        );
-    }
+		if (props.isLoggedIn && !props.authUserData.isVerified) {
+			navigate('/login/verify');
+		}
+	}, [navigate, props.isLoggedIn, props.authUserData.isVerified]);
 
-    return (
-        <div>
-            <ProfilePage authUserData={props.authUserData}
-                         logout={props.logout}
-            />
-        </div>
-    );
+	return (
+		<div>
+			<ProfilePage
+				authUserData={props.authUserData}
+				logout={props.logout}
+			/>
+		</div>
+	);
 };
 
 const mapStateToProps = (state) => ({
-    isLoggedIn: state.userProfile.isLoggedIn,
-    authUserData: state.userProfile.authUserData
-})
+	isLoggedIn: state.userProfile.isLoggedIn,
+	authUserData: state.userProfile.authUserData,
+});
 
-export default compose(connect(mapStateToProps, {
-    logout
-}))(ProfilePageContainer);
+export default compose(
+	connect(mapStateToProps, {
+		logout,
+	})
+)(ProfilePageContainer);

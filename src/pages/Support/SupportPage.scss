@@ -1,174 +1,183 @@
-$formBlue: #F5FDFF;
-$formBackgroundBlue: #E9FCFF;
+$formBlue: #f5fdff;
+$formBackgroundBlue: #e9fcff;
 $formGray: #989797;
 
 .support {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
 
-  min-height: 84vh;
-  height: 100%;
-  width: 100%;
+	min-height: 84vh;
+	height: 100%;
+	width: 100%;
 
-  padding-bottom: 30px;
+	padding-bottom: 30px;
 
-  background: linear-gradient(103.67deg, rgba(219, 185, 240, 0) 16.86%, #C5D9E8 100%),
-  linear-gradient(253.04deg, rgba(255, 243, 243, 0) 23.83%, #D1BBED 87.05%), #E9FCFF;
+	background: linear-gradient(
+			103.67deg,
+			rgba(219, 185, 240, 0) 16.86%,
+			#c5d9e8 100%
+		),
+		linear-gradient(
+			253.04deg,
+			rgba(255, 243, 243, 0) 23.83%,
+			#d1bbed 87.05%
+		),
+		#e9fcff;
 
-  font-family: Roboto, sans-serif;
+	font-family: Roboto, sans-serif;
 
-  &__heading {
-    padding-top: 30px;
-    padding-bottom: 30px;
+	&__heading {
+		padding-top: 30px;
+		padding-bottom: 30px;
 
-    width: 80%;
+		width: 80%;
 
-    font-weight: bold;
+		font-weight: bold;
 
-    h1 {
-      font-size: 28px;
-      line-height: 32px;
-      margin-bottom: 20px;
-    }
+		h1 {
+			font-size: 28px;
+			line-height: 32px;
+			margin-bottom: 20px;
+		}
 
-    p {
-      font-size: 18px;
-      line-height: 26px;
-    }
-  }
+		p {
+			font-size: 18px;
+			line-height: 26px;
+		}
+	}
 
-  &__form {
-    display: grid;
-    grid-template-areas:"email description"
-    "topicSelection description"
-    "attachments sendButton";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: max-content 1fr max-content;
-    grid-gap: 20px;
+	&__form {
+		display: grid;
+		grid-template-areas:
+			'email description'
+			'topicSelection description'
+			'attachments sendButton';
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: max-content 1fr max-content;
+		grid-gap: 20px;
 
-    min-width: max-content;
-    width: 80%;
+		min-width: max-content;
+		width: 80%;
 
-    padding: 30px;
+		padding: 30px;
 
-    background: $formBackgroundBlue;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		background: $formBackgroundBlue;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    h2 {
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 26px;
-      margin-bottom: 10px;
-      text-align: left;
-    }
+		h2 {
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 26px;
+			margin-bottom: 10px;
+			text-align: left;
+		}
 
-    &__block {
-      background: $formBlue;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+		&__block {
+			background: $formBlue;
+			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 
-      height: 100%;
-    }
+			height: 100%;
+		}
 
+		&__email {
+			grid-area: email;
 
-    &__email {
-      grid-area: email;
+			input {
+				background-color: $formBlue;
+			}
+		}
 
-      input {
-        background-color: $formBlue;
-      }
-    }
+		&__description {
+			grid-area: description;
 
-    &__description {
-      grid-area: description;
+			padding-bottom: 35px;
 
-      padding-bottom: 35px;
+			textarea {
+				resize: none;
+				height: 100%;
+				background-color: $formBlue;
+			}
+		}
 
-      textarea {
-        resize: none;
-        height: 100%;
-        background-color: $formBlue;
-      }
-    }
+		&__selections {
+			grid-area: topicSelection;
 
-    &__selections {
-      grid-area: topicSelection;
+			&__group {
+				display: flex;
+				flex-direction: column;
 
+				text-align: left;
 
-      &__group {
-        display: flex;
-        flex-direction: column;
+				padding: 10px 5px 5px 5px;
 
-        text-align: left;
+				&__radio {
+					margin-bottom: 5px;
+					margin-left: 10px;
+				}
 
-        padding: 10px 5px 5px 5px;
+				input {
+					margin-top: 5px;
+					width: 80%;
+					margin-left: 20px;
+				}
 
-        &__radio {
-          margin-bottom: 5px;
-          margin-left: 10px;
-        }
+				input,
+				input:active,
+				input:focus,
+				input:disabled,
+				input:hover,
+				input:enabled {
+					box-shadow: 0 0 0;
+					border: 0;
+					border-bottom: 2px solid $formGray;
+					background-color: $formBlue;
+				}
+			}
+		}
 
-        input {
-          margin-top: 5px;
-          width: 80%;
-          margin-left: 20px;
-        }
+		&__attachments {
+			grid-area: attachments;
 
-        input, input:active, input:focus, input:disabled, input:hover, input:enabled {
-          box-shadow: 0 0 0;
-          border: 0;
-          border-bottom: 2px solid $formGray;
-          background-color: $formBlue;
-        }
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+			justify-items: start;
 
+			&__uploadButton,
+			&__uploadButton:active,
+			&__uploadButton:disabled,
+			&__uploadButton:hover,
+			&__uploadButton:enabled {
+				background-color: $formBlue;
+				box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+			}
+		}
 
-      }
+		&__sendButton {
+			grid-area: sendButton;
 
-    }
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
 
-    &__attachments {
-      grid-area: attachments;
+			width: 100%;
 
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-      justify-items: start;
+			button {
+				align-self: flex-end;
 
-      &__uploadButton,
-      &__uploadButton:active,
-      &__uploadButton:disabled,
-      &__uploadButton:hover,
-      &__uploadButton:enabled {
-        background-color: $formBlue;
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-      }
+				width: max-content;
+			}
 
-    }
-
-    &__sendButton {
-      grid-area: sendButton;
-
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-
-      width: 100%;
-
-      button {
-        align-self: flex-end;
-
-        width: max-content;
-      }
-
-      button,
-      button:active,
-      button:disabled,
-      button:hover,
-      button:enabled {
-        background-color: $formBlue;
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-      }
-    }
-  }
+			button,
+			button:active,
+			button:disabled,
+			button:hover,
+			button:enabled {
+				background-color: $formBlue;
+				box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+			}
+		}
+	}
 }

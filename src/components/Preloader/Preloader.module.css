@@ -1,9 +1,9 @@
-.preloaderLarge{
-    margin-bottom: 20px;
-    margin-top: 20px;
-    height: 50vh;
-    width: 50vw;
-    position: absolute;
-    left: 25vw;
-    bottom: 25vh;
+.preloaderLarge {
+	margin-bottom: 20px;
+	margin-top: 20px;
+	height: 50vh;
+	width: 50vw;
+	position: absolute;
+	left: 25vw;
+	bottom: 25vh;
 }

@@ -1,14 +1,15 @@
 //colors
 
-$green: #44C716;
-$greenBtn: #9CDF84;
-$brightGreen: #38D302;
+$green: #44c716;
+$greenBtn: #9cdf84;
+$brightGreen: #38d302;
 $black: #000000;
-$semiBlack: #3C3322;
+$semiBlack: #3c3322;
 $blue: rgb(233, 252, 255);
 
 //colors and filters for hovers
 $hoverColor: brown;
-$hoverFilterForBlack: invert(27%) sepia(21%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
-$hoverFilterForSemiBlack: invert(47%) sepia(16%) saturate(2878%) hue-rotate(346deg) brightness(74%) contrast(97%);
-
+$hoverFilterForBlack: invert(27%) sepia(21%) saturate(2878%) hue-rotate(346deg)
+	brightness(104%) contrast(97%);
+$hoverFilterForSemiBlack: invert(47%) sepia(16%) saturate(2878%)
+	hue-rotate(346deg) brightness(74%) contrast(97%);

@@ -1,14 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import SupportPage from "./SupportPage";
+import SupportPage from './SupportPage';
 
 const SupportPageContainer = () => {
+	document.title = 'Поддержка - Video Monkey';
 
-    document.title = "Поддержка - Video Monkey";
-
-    return (
-        <SupportPage/>
-    );
+	return <SupportPage />;
 };
 
 export default SupportPageContainer;
